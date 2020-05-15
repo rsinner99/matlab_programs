@@ -10,7 +10,7 @@ end
 
 result = zeros(1,N);
 for i = 1:N
-    result(i) = x(i) * y(i);
+    result(i) = x(i) .* y(i);
 end
 
 disp("Ergebnis 1:")
