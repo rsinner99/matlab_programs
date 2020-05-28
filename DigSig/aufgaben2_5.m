@@ -11,11 +11,13 @@ N=16;
 n1=1:(N/2+1);
 x(n1)= 3+2*sin(2*pi*(n1/N));
 
+n = 0:length(x)-1;
+
 figure(1)
-plot(x)
+stem(n, x, 'm')
 title=('Modul Digitale Signalverarbeitung: Aufgabe 2.5a)');
-xlabel('n');
-ylabel('x(n)');
+xlabel('{\itn}');
+ylabel('$x[n]$', 'Interpreter', 'Latex');
         
 % Aufgabenteil b)
 a=0.4;
@@ -24,7 +26,7 @@ n2=1:N+1;
 y(n2)= exp(-a*n2);
 
 figure(2)
-plot(y)
+stem(y)
 title=('Modul Digitale Signalverarbeitung: Aufgabe 2.5b)');
 xlabel('n');
 ylabel('y(n)');
@@ -40,7 +42,7 @@ for n3= 1:(2*k+1)
 end
 
 figure(3)
-plot(z)
+stem(z)
 title=('Modul Digitale Signalverarbeitung: Aufgabe 2.5c)');
 xlabel('n');
 ylabel('z(n)'); 

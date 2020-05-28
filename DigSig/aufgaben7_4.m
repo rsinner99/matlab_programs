@@ -9,7 +9,8 @@ clear
 x = [2 4 6 4 2];
 
 % b) Code:
-y(1:(length(x)+1)) = 0;
+% y(1:(length(x)+1)) = 0;
+y = zeros(1, length(x)+1);
 
 for n=1:length(x)
     y(n+1) = y(n) + x(n);
