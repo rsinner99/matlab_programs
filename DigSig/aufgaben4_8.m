@@ -9,7 +9,7 @@ sizeM = size(M);
 
 for i = 1:sizeM(1)
     for j = 1:sizeM(2)
-        M(i:sizeM(1),j:sizeM(2)) = M(i,j) + 1;
+        M(i,j) = (i-1) + (j-1)*2;
     end
 end
 
