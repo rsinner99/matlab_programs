@@ -28,8 +28,8 @@ y(n2)= exp(-a*n2);
 figure(2)
 stem(y)
 title=('Modul Digitale Signalverarbeitung: Aufgabe 2.5b)');
-xlabel('n');
-ylabel('y(n)');
+xlabel('{\itn}');
+ylabel('{\ity}[{\itn}]');
      
 % Aufgabenteil c)
 k= 6;
