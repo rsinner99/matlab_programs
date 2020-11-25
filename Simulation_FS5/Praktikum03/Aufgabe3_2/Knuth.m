@@ -5,12 +5,12 @@ function [a,c] = Knuth(m)
     c_min = 1;
     p = factor(m);
     for i=1:length(p)
-        if mod(a_list(a_min)-1, p(i))~=0
-            a_min = a_min+1;
+        if mod(((a_list(a_min))-1), p(i))>0
+            a_min = a_min + 1;
             i = 1;
         elseif mod(m,4)==0
-            if mod(a_list(a_min)-1, 4)~=0
-                a_min = a_min+1;
+            if mod(((a_list(a_min))-1), 4)>0
+                a_min = a_min + 1;
                 i = 1;
             end
         end
