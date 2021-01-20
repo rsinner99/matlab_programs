@@ -1,4 +1,4 @@
-function y = standardabweichung(v)
+function y = varianz(v)
     mw = mittelwert(v);
     n = length(v);
     y = 0;

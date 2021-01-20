@@ -1,7 +1,6 @@
-function y = Binomialverteilung(n, x, p)
+function y = Binomialverteilung(n, x, p, start) %start als Startwert
      y = 0;
-     for k=1:floor(x)
-         n_uber_x = factorial(n)/(factorial(k)*factorial(n-k));
-         y = y + (n_uber_x * p^k * (1-p)^(n-k));
+     for k=start:floor(x)
+         y = y + (nueberx(n,k) * p^k * (1-p)^(n-k));
      end
 end
