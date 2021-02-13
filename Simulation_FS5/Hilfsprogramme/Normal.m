@@ -1,4 +1,4 @@
-function y = Standardnormal(mu, sigma, x)
+function y = Normal(mu, sigma, x)
     u = (x-mu)/sigma;
     y = normcdf(u);
 end
