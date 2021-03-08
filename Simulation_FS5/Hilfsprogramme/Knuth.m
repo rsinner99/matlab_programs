@@ -1,7 +1,9 @@
-function [a c] = Knuth(m)
+function [a, c] = Knuth(m)
     p=factor(m);
     %
+    al = [];
     a=floor(sqrt(m));
+    i=0;
     for i=1:m-floor(sqrt(m))-1
         b=a;
         if mod(m,4)==0
@@ -17,7 +19,13 @@ function [a c] = Knuth(m)
             end
         end
         if b==a
-            break;
+            al(end+1) = a;
+            i = i+1;
+            if i>2
+                break;
+            else
+                a=a+1;
+            end
         else
             a=a+1;
         end
@@ -31,4 +39,5 @@ function [a c] = Knuth(m)
             c=c+1;
         end
     end
+    al
 end
